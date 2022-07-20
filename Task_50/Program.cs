@@ -51,16 +51,12 @@ void PrintArray(int[,] array)
     }
 }
 
-// Строки и столбцы начинаются с 1, для непосвещенного пользователя,
-// Чтобы использовать индексы (от 0),раскоментируйте строки 53 и 54.
 void FindElementPosition(int[,] array, int positionRows, int positionColumns)
 {
     if (positionRows < array.GetLength(0) && positionColumns < array.GetLength(1))
     {
         Console.WriteLine($"На позиции строка № {positionRows}, столбец № {positionColumns} " +
                           $"находится элемент со значением: {array[positionRows - 1, positionColumns - 1]}");
-        // Console.WriteLine($"На позиции строка № {positionRows}, столбец № {positionColumns} " +
-        //                   $"находится элемент со значением: {array[positionRows, positionColumns]}");
     }
     else Console.WriteLine($"Cтрока № {positionRows}, столбец № {positionColumns} - такой позиции в массиве нет.");
 }
